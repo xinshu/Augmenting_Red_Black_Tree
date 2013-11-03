@@ -1,0 +1,3 @@
+to test:
+javac RBTree.java
+java RBTree
