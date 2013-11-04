@@ -10,7 +10,7 @@ Charles E.Leiserson, Ronald L.Rivest, Clifford Stein) as a reference
 Organized and coded by Shaola Ren @ November, 2013
 
 Java API: Augmenting Red Black Tree, beside the red black trees properties, 
-plus maitain each node's size during insert() and delete(), allow duplicates
+plus maintain each node's size during insert() and delete(), allow duplicates
 
 Usage:
 
@@ -35,7 +35,10 @@ public void delete(T key), delete key from a tree if exists,
 eg: root.delete(key), delete key from the tree rooted from root if exists,
 	else throw NoSuchElementException
 
-other class methods(17):
+other class methods(18):
+public boolean isEmpty(), judge whether this tree is empty, O(1)
+eg: root.isEmpty()
+
 public void inorderT(), print out tree's entry through inorder traverse 
                         along with the size of subtree rooted from each
 						node and the color of this node, and also this node
@@ -558,6 +561,10 @@ public class RBTree<T extends Comparable<T>>{
     }
 	
 	// additional utility functions
+	
+	public boolean isEmpty(){
+		return root==null;
+	}
 	
 	public ArrayList<ArrayList<T>> getAllPathToLeave(){
 		return getAllPathToLeaveOfNode(root);
